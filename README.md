@@ -3,7 +3,7 @@
 ## Project Live Reviwe
 - [Live Reviwe]( https://abdelrahmannabeel.github.io/Get-Repos/)
 ## About The project
-- Get GitHub Repositories With Fetch API By GitHub Username And Browser It
+- Get GitHub Repositories Using Fetch API By GitHub Username and Browse Them.
 ## Tools
 - HTML
 - CSS
