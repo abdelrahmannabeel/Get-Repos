@@ -1,7 +1,7 @@
 # Get GitHub Repositories With Fetch API
 ![Get GitHub Repositories With Fetch API](./imgs/project-landing.png)
 ## Project Live Reviwe
-- [Live Reviwe]( https://abdelrahmannabeel.github.io/Get-Repos/)
+- [Live Review]( https://abdelrahmannabeel.github.io/Get-Repos/)
 ## About The project
 - Get GitHub Repositories Using Fetch API By GitHub Username and Browse Them.
 ## Tools
