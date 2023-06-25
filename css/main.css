@@ -1,0 +1,189 @@
+:root {
+  --backdrop-blur: blur(10px);
+  --background-color: #33333350;
+}
+* {
+  box-sizing: border-box;
+  caret-color: red;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  min-height: calc(100vh - 20px);
+  background-color: #333;
+  background-image: url(../imgs/image.jpg);
+  background-position: center;
+  background-size: cover;
+}
+*:focus {
+  outline: none;
+}
+*::placeholder {
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+#input,
+#user,
+#repos {
+  margin-top: 20px;
+}
+
+#input .container {
+  display: flex;
+}
+#input .container :is(input, button) {
+  backdrop-filter: var(--backdrop-blur);
+  background: var(--background-color);
+  border: none;
+  height: 50px;
+  font-size: 18px;
+  color: white;
+}
+#input .container input {
+  flex: 1;
+  padding: 10px 20px;
+  border-radius: 6px 0 0 6px;
+}
+#input .container button {
+  width: 200px;
+  margin: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 0 6px 6px 0;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+#user .container > div {
+  display: flex;
+  gap: 10px;
+  padding: 20px 0;
+  backdrop-filter: var(--backdrop-blur);
+  background: var(--background-color);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#user .container .avatar {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid aqua;
+  padding: 3px;
+}
+#user .container .avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+#user .user :is(h2, h3) {
+  margin: 0;
+  font-weight: bolder;
+  padding-bottom: 20px;
+  color: white;
+}
+#user .user h2 {
+  font-size: 30px;
+}
+#user .user h3 {
+  font-size: 20px;
+}
+#user .follow {
+  display: flex;
+  gap: 10px;
+  color: white;
+}
+#user .follow > span {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #3333335d;
+  font-size: 14px;
+}
+.visit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
+}
+.visit i {
+  transition: 0.3s;
+  font-weight: 600;
+  font-size: 15px;
+  margin-left: 5px;
+  color: aqua;
+}
+.visit:hover i {
+  color: #e20c82;
+}
+#repos .repo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid greenyellow;
+  backdrop-filter: var(--backdrop-blur);
+  background: var(--background-color);
+  transition: 0.3s;
+  cursor: default;
+}
+#repos .repo .repo-name {
+  color: white;
+  transition: 0.3s;
+}
+#repos .repo:hover .repo-name {
+  color: greenyellow;
+  padding-left: 10px;
+}
+#repos .repo .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+#repos .repo .content > span:not(:last-child) {
+  border-right: 2px solid #272727;
+  padding: 0 10px;
+}
+.filled {
+  color: #ffc107;
+}
+.eye {
+  color: #e20c82;
+}
+#user {
+  display: none;
+}
