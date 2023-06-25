@@ -70,7 +70,7 @@ function showRepos() {
               <i class="eye fa-solid fa-eye"></i>
             </span>
             <span>
-              <a href="${repo.html_url}" class="visit">
+              <a href="${repo.html_url}" class="visit" target="_blank" >
                 <span>Visit</span>
                 <i class="fa-regular fa-arrow-up-right-from-square fa-lg"></i>
               </a>
