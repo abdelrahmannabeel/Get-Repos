@@ -4,25 +4,25 @@ let inputValue = userNameInput.value.trim("");
 let accountName = document.querySelector("#user .container .name");
 let userName = document.querySelector("#user .container .username");
 let userAvatar = document.querySelector("#user .container .avatar img");
-let following = document.querySelector("#user .container .following");
+let reposNumbers = document.querySelector("#user .container .repos-num");
 let follower = document.querySelector("#user .container .followers");
 let accountURL = document.querySelector("#user .container span .visit");
 accountURL.setAttribute(`target`, `_blank`);
 let userSec = document.querySelector("#user");
 let reposSec = document.querySelector("#repos");
 
-getRepos.addEventListener("click", function(event) {
-    event.preventDefault();
-    console.log(userNameInput.value.trim(""));
-    userSec.style.display = "block";
-    reposSec.innerHTML = "";
-    showRepos();
-    userNameInput.value = "";
+getRepos.addEventListener("click", function (event) {
+  event.preventDefault();
+  console.log(userNameInput.value.trim(""));
+  userSec.style.display = "block";
+  reposSec.innerHTML = "";
+  showRepos();
+  userNameInput.value = "";
 });
-userNameInput.addEventListener("keyup", function(event) {
+userNameInput.addEventListener("keyup", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
-    console.log(userNameInput.value.trim(""));
+    console.log(userNameInput.value.trim());
     userSec.style.display = "block";
     reposSec.innerHTML = "";
     showRepos();
@@ -31,7 +31,9 @@ userNameInput.addEventListener("keyup", function(event) {
 });
 
 function showRepos() {
-  fetch(`https://api.github.com/users/${userNameInput.value.trim("")}`)
+  fetch(
+    `https://api.github.com/users/${userNameInput.value.trim().toLowerCase()}`
+  )
     .then((user) => {
       return user.json();
     })
@@ -41,12 +43,16 @@ function showRepos() {
       accountName.textContent = user.name;
       userName.textContent = user.login;
 
-      following.textContent = `${user.following} Following`;
+      reposNumbers.textContent = `${user.public_repos} Repo`;
       follower.textContent = `${user.followers} follower`;
       accountURL.href = user.html_url;
     });
 
-  fetch(`https://api.github.com/users/${userNameInput.value.trim("")}/repos`)
+  fetch(
+    `https://api.github.com/users/${userNameInput.value
+      .trim("")
+      .toLowerCase()}/repos`
+  )
     .then((repos) => {
       return repos.json();
     })
