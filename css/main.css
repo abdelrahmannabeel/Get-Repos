@@ -7,7 +7,7 @@
   caret-color: red;
 }
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   min-height: calc(100vh - 20px);
   background-color: #333;
   background-image: url(../imgs/image.jpg);
@@ -188,8 +188,6 @@ ul {
   display: none;
 }
 
-
-header{
+header {
   height: 4rem;
-  
 }
