@@ -17,7 +17,7 @@ getRepos.addEventListener("click", function (event) {
   userSec.style.display = "block";
   reposSec.innerHTML = "";
   showRepos();
-  userNameInput.value = "";
+  //userNameInput.value = "";
 });
 userNameInput.addEventListener("keyup", function (event) {
   if (event.key === "Enter") {
