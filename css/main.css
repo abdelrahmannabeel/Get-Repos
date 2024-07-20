@@ -83,6 +83,7 @@ ul {
   border-radius: 0 6px 6px 0;
   transition: 0.3s;
   font-weight: bold;
+  /* font-weight: bold; */
 }
 
 #user .container > div {
